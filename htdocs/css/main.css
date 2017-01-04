@@ -1,0 +1,93 @@
+body{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+#menu{
+ padding-top: 40px;
+}
+#menu .menu_logo{
+    float:left;
+}
+#menu .menu_link{
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    float: right;
+}
+
+#myModal .modal-content{
+    background-color: transparent;
+    border: none;
+    padding-top: 40px;
+    box-shadow: none;
+}
+
+#myModal .modal-backdrop.in{
+    opacity: 1;
+}
+
+#myModal .modal-header{
+    border: none;
+}
+
+#myModal .modal-header{
+    border: none;
+    padding-top: 0;
+    height: 60px;
+}
+
+#myModal  .close-icon{
+    font-size: 60px;
+    margin-right: -20px;
+    color: white;
+}
+
+#myModal  .modal-header .close{
+    opacity: 1;
+}
+
+#myModal .modal-body{
+    border: none;
+    padding: 70px 140px 0;
+}
+
+#myModal .modal-body ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+#myModal .modal-body li{
+   margin-bottom: 56px;
+}
+
+#myModal .modal-body .menu-list-first{
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+#myModal .modal-body a{
+    color: white;
+    text-decoration: none;
+}
+
+#myModal.modal-body .li-left-icon{
+    margin-right: 60px;
+}
+
+#myModal .dropdown{
+
+}
+
+#myModal .dropdown-listings{
+    background-color: transparent;
+    padding-left: 85px;
+    padding-top: 12px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+#myModal .dropdown-listings .li-left-small-icon{
+    margin: 0 36px 0 27px;
+    font-weight: bold;
+}

@@ -59,6 +59,7 @@ DirectoryIndex website.php
 
     # Rewrite all other queries to the front controller.
     RewriteRule .? %{ENV:BASE}/website.php [L]
+
 </IfModule>
 
 <IfModule !mod_rewrite.c>

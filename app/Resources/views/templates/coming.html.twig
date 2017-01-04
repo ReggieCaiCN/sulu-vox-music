@@ -6,7 +6,6 @@
     {% endautoescape %}
 {% endblock %}
 {% block header %}{% endblock %}
-{% block menu %}{% endblock %}
 {% block content %}
     <div property="img">
         {% if content.img and content.img['0'] %}
@@ -14,6 +13,6 @@
         {% else %}
             {% set img ="/image/coming-soon.jpg" %}
         {% endif %}
-        <img src="{{ img }}" width="100%">
+        {#<img src="{{ img }}" width="100%">#}
     </div>
 {% endblock %}

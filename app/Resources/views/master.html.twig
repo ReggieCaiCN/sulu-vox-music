@@ -17,19 +17,19 @@
     </head>
     <body>
         <header>
-            {% block header %}
-                <nav>
-                    <ul>
-                        <li><a href="{{ sulu_content_root_path() }}">Homepage</a></li>
-                        {% for item in sulu_navigation_root_tree('main') %}
-                            <li>
-                                <a href="{{ sulu_content_path(item.url) }}"
-                                   title="{{ item.title }}">{{ item.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            {% endblock %}
+            {#{% block header %}#}
+                {#<nav>#}
+                    {#<ul>#}
+                        {#<li><a href="{{ sulu_content_root_path() }}">Homepage</a></li>#}
+                        {#{% for item in sulu_navigation_root_tree('main') %}#}
+                            {#<li>#}
+                                {#<a href="{{ sulu_content_path(item.url) }}"#}
+                                   {#title="{{ item.title }}">{{ item.title }}</a>#}
+                            {#</li>#}
+                        {#{% endfor %}#}
+                    {#</ul>#}
+                {#</nav>#}
+            {#{% endblock %}#}
         </header>
 
         {#{% block search %}#}
@@ -43,6 +43,7 @@
             <div class="container">
                 <div id="menu">
                     <img src="/image/menu_logo.png" class="menu_logo">
+                    {#<img src="/image/menu_logo_m.png" class="menu_logo mobile-only">#}
                     <a  class="menu_link" data-toggle="modal" data-target="#myModal">
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </a>
@@ -57,18 +58,50 @@
                             <div class="modal-body">
                                 <nav>
                                     <ul>
-                                        {% for item in sulu_navigation_root_tree('main') %}
-                                            <li class="dropdown">
-                                                <a href="{{ sulu_content_path(item.url) }}" class="menu-list-first" data-toggle="dropdown" data-target=".dropdown-menu-{{ loop.index }}"
-                                                   title="{{ item.title }}"><span class="li-left-icon">/</span>{{ item.title }}</span>
-                                                </a>
-                                                <div class="dropdown-menu dropdown-listings dropdown-menu-{{ loop.index }}">
-                                                    <a class="" href="#">Music Experts</a> <span class="li-left-small-icon">/</span>
-                                                    <a class="" href="#">Crafted Work</a> <span class="li-left-small-icon">/</span>
-                                                    <a class="" href="#">Music Experts</a> <span class="li-left-small-icon">/</span>
-                                                </div>
-                                            </li>
-                                        {% endfor %}
+                                        <li class="dropdown">
+                                            <a href="/abuou_us" class="menu-list-first" data-toggle="dropdown" data-target=".dropdown-menu-1">
+                                                <span class="li-left-icon">/</span>about us</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-listings dropdown-menu-1">
+                                                <a class="" href="/abuou_us#MusicExperts">Music Experts</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/abuou_us#CraftedWork">Crafted Work</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/abuou_us#Database">Database</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/abuou_us#Network">Network</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="/what_we_do" class="menu-list-first" data-toggle="dropdown" data-target=".dropdown-menu-2">
+                                                <span class="li-left-icon">/</span>what we do</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-listings dropdown-menu-2">
+                                                <a class="" href="/what_we_do#MusicDirection">Music Direction</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/what_we_do#BackgroundMusic">Background Music</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/what_we_do#Events">Events & Fashion Shows</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/what_we_do#SyncMusic">Sync Music</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/what_we_do#CopyrightsManagement">Copyrights Management</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="/what_we_deliver" class="menu-list-first" data-toggle="dropdown" data-target=".dropdown-menu-3">
+                                                <span class="li-left-icon">/</span>what we deliver</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-listings dropdown-menu-3">
+                                                <a class="" href="/what_we_deliver#Device">Optimized Device</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/what_we_deliver#Solution">Easy-to-use Solution</a> <span class="li-left-small-icon">/</span>
+                                                <a class="" href="/what_we_deliver#Selection">Updated tailor-made selection</a>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="/references" class="menu-list-first">
+                                                <span class="li-left-icon">/</span>references</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="/contacts" class="menu-list-first">
+                                                <span class="li-left-icon">/</span>contacts</span>
+                                            </a>
+                                        </li>
+
                                     </ul>
                                 </nav>
 

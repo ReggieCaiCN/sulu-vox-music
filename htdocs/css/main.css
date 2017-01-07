@@ -6,11 +6,12 @@ body{
 }
 #menu .menu_logo{
     float:left;
+    margin-top: 18px;
 }
 #menu .menu_link{
     display: inline-block;
     font-size: 40px;
-    color: white;
+    color: black;
     float: right;
 }
 
@@ -47,7 +48,7 @@ body{
 
 #myModal .modal-body{
     border: none;
-    padding: 70px 140px 0;
+    padding: 70px 0 0 140px;
 }
 
 #myModal .modal-body ul{
@@ -56,7 +57,7 @@ body{
 }
 
 #myModal .modal-body li{
-   margin-bottom: 56px;
+   margin-bottom: 50px;
 }
 
 #myModal .modal-body .menu-list-first{
@@ -70,7 +71,7 @@ body{
     text-decoration: none;
 }
 
-#myModal.modal-body .li-left-icon{
+#myModal .modal-body .li-left-icon{
     margin-right: 60px;
 }
 
@@ -85,9 +86,65 @@ body{
     font-size: 28px;
     letter-spacing: 1px;
     text-transform: capitalize;
+    position: relative;
+    float: none;
+}
+#myModal  .dropdown-menu.open{
+    display: block;
 }
 
 #myModal .dropdown-listings .li-left-small-icon{
     margin: 0 36px 0 27px;
     font-weight: bold;
+    color: white;
+}
+
+.vox-title{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 106px;
+    text-transform: uppercase;
+    margin: 42px 0 76px 0;
+}
+
+.vox-bk{
+    background: url(/image/bk.jpg) 50% 0 no-repeat;
+    height: 523px;
+    background-size: cover;
+}
+
+.mobile-only{
+    display: none;
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+    #menu{
+        padding-top: 20px;
+    }
+    #myModal .modal-content{
+        padding-top: 20px;
+    }
+    #myModal .modal-body{
+        padding: 30px 0 0 0;
+    }
+    #myModal .modal-body li{
+        margin-bottom: 30px;
+    }
+    #myModal .modal-body .li-left-icon{
+        margin-right: 1.5em;
+    }
+    #myModal .dropdown-listings .li-left-small-icon{
+        margin: 0 1.5em 0 1em;
+    }
+    .vox-title{
+        font-size: 23px;
+        line-height: 53px;
+        margin: 0;
+    }
+    .mobile-only{
+        display: block;
+    }
+
 }

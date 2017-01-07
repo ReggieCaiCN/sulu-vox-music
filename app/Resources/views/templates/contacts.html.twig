@@ -1,0 +1,48 @@
+{% extends "master.html.twig" %}
+
+{% block meta %}
+    {% autoescape false %}
+        {{ sulu_seo(extension.seo, content, urls, shadowBaseLocale) }}
+    {% endautoescape %}
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="/css/contacts.css">
+{% endblock %}
+
+{% block content %}
+    <div class="contacts">
+        <h1 property="title" class="vox-title">{{ content.title }}</h1>
+        <div class="vox-bk">
+            <div class="container contacts-container">
+                <div class="row">
+                    <div class="col-sm-4 col-sx-12 text-center">
+                        <div property="email">
+                            <div class="circle-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </div>
+                            {{ content.email }}
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-sx-12 text-center">
+                        <div property="wechat">
+                            <div class="circle-icon">
+                                <i class="fa fa-weixin" aria-hidden="true"></i>
+                            </div>
+                            {{ content.wechat }}
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-sx-12 text-center">
+                        <div property="phones">
+                            <div class="circle-icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            {{ content.phones|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

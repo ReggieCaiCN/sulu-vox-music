@@ -1,0 +1,49 @@
+.contacts{
+    padding-top: 40px;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.contacts .contacts-container{
+    padding-top: 50px;
+}
+
+.contacts .circle-icon{
+    width: 104px;
+    height: 104px;
+    border: 1px solid #000000;
+    text-align: center;
+    border-radius: 52px;
+    margin: 26px auto;
+}
+
+.contacts .circle-icon i{
+    display: inline-block;
+    font-size: 34px;
+    line-height: 104px;
+}
+
+
+/*mobile*/
+@media (max-width: 767px) {
+    .contacts{
+        padding-top: 0;
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .contacts .contacts-container{
+        padding-top: 0px;
+    }
+    .contacts .circle-icon{
+        width: 80px;
+        height: 80px;
+        border: 1px solid #000000;
+        text-align: center;
+        border-radius: 40px;
+        margin: 13px auto;
+    }
+    .contacts .circle-icon i{
+        font-size: 30px;
+        line-height: 80px;
+    }
+}

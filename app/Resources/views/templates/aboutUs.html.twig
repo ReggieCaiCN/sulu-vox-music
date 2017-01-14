@@ -1,0 +1,153 @@
+{% extends "master.html.twig" %}
+
+{% block meta %}
+    {% autoescape false %}
+        {{ sulu_seo(extension.seo, content, urls, shadowBaseLocale) }}
+    {% endautoescape %}
+{% endblock %}
+{% block header %}{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="/css/abuoutUs.css">
+{% endblock %}
+{% block bodyAttr %}data-offset="97"{% endblock %}
+{% block content %}
+    <div class="page-menu">
+        <div class="page-menu-container">
+            <a class="page-menu-list" href="#page-menu-index1">{{ content.music_experts_title }}</a>
+            <a class="page-menu-list" href="#page-menu-index2">{{ content.grafted_works_title }}</a>
+            <a class="page-menu-list" href="#page-menu-index3">{{ content.database_title }}</a>
+            <a class="page-menu-list" href="#page-menu-index4">{{ content.network_title}}</a>
+        </div>
+    </div>
+    <div class="about-us">
+        <h1 property="title" class="vox-title">{{ content.title }}</h1>
+        <div id="page-menu-index1">
+            <div class="container about-us-container music-experts-title">
+                <div class="vox-title-second">
+                    <span class="title-left-icon">/</span>{{ content.music_experts_title }}
+                </div>
+            </div>
+            <div class="row music-experts-row flex flex-vc vox-gray-bk">
+                <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-2">
+                    {% if content.music_experts_img and content.music_experts_img['0'] %}
+                        <img src="{{ content.music_experts_img['0'].url }}" class="img-full-box">
+                    {% endif %}
+                </div>
+                <div class="col-sm-6 col-xs-12 about-us-content-desc flex-1">
+                    <div class="vox-container-half vox-container-half-left">
+                        <div class="content-desc-text">
+                            <div class="vox-desc">{{ content.music_experts_desc|raw }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row users-row">
+                    {% for user in content.users %}
+                        <div class="col-sm-4 col-xs-12 user-box">
+                            {% if user.img_icon and user.img_icon['0'] %}
+                                <img src="{{ user.img_icon['0'].url }}" class="user-icon">
+                            {% endif %}
+                            <div class="user-name">{{ user.name }}</div>
+                            <div class="vox-line">/</div>
+                            <div class="user-title">{{ user.title }}</div>
+                            <div class="vox-desc">{{ user.desc|raw }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row green-united-music-row flex flex-vc vox-gray-bk">
+                <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-1">
+                    {% if content.green_united_music_img and content.green_united_music_img['0'] %}
+                        <img src="{{ content.green_united_music_img['0'].url }}" class="img-full-box">
+                    {% endif %}
+                </div>
+                <div class="col-sm-6 col-xs-12 about-us-content-desc flex-2">
+                    <div class="vox-container-half vox-container-half-right">
+                        <div class="content-desc-text">
+                            <div class="green_united_music-title">{{ content.green_united_music_title }}</div>
+                            <div class="vox-line">/</div>
+                            <div class="green_united_music-desc">{{ content.green_united_music_desc|raw }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page-menu-index2">
+            <div class="container">
+                <div class="vox-title-second">
+                    <span class="title-left-icon">/</span>{{ content.grafted_works_title }}
+                </div>
+                <div class="row crafted-works-row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="vox-desc green_united_music-desc">{{ content.grafted_works_desc|raw }}</div>
+                    </div>
+                    {% for greenImg in content.grafted_works_img %}
+                        {% if greenImg.url %}
+                            <div class="col-sm-4 col-xs-4 green_united_music-imgbox">
+                                <div class="green-img-border"><img src="{{ greenImg.url }}" class="green-img img-responsive"></div>
+                                <div class="green-img-title">{{ greenImg.title }}</div>
+                                <div class="green-img-desc">{{ greenImg.description }}</div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="vox-gray-bk database-box" id="page-menu-index3">
+            <div class="container">
+                <div class="vox-title-second">
+                    <span class="title-left-icon">/</span>{{ content.database_title }}
+                </div>
+                <div class="row database-row">
+                    <div class="col-sm-6 col-xs-12 vox-left-padding-box">
+                        <div class="database-title">{{ content.database_title_second_left }}</div>
+                        <div class="vox-line text-center">/</div>
+                        <div class="database-desc">{{ content.database_desc_left|raw }}</div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="database-title">{{ content.database_title_second_right }}</div>
+                        <div class="vox-line text-center">/</div>
+                        <div class="database-desc">{{ content.database_desc_right|raw }}</div>
+                        <div class="row">
+                            {% for database_img_right in content.database_img_right %}
+                                {% if database_img_right.url %}
+                                    <div class="col-sm-6 col-xs-6 database-imgbox">
+                                        <img src="{{ database_img_right.url }}" class="database-img img-responsive">
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="network-box" id="page-menu-index4">
+            <div class="container">
+                <div class="vox-title-second">
+                    <span class="title-left-icon">/</span>{{ content.network_title }}
+                </div>
+                <div class="network-desc">{{ content.network_desc|raw }}</div>
+                <div class="row">
+                    {% for network_img in content.network_img %}
+                        {% if network_img.url %}
+                            <div class="col-sm-5 col-xs-5 network-imgbox {% if loop.index%2 ==1  %}box-left{% else %}box-right{% endif %}">
+                                <div class="network-imgbox-content" >
+                                    <img src="{{ network_img.url }}" class="network-img">
+                                    <div class="network-img-title network-text">{{ network_img.title }}</div>
+                                    <div class="network-img-desc network-text">{{ network_img.description }}</div>
+                                </div>
+                            </div>
+                            {% if content.network_img|length  >1 and loop.index%2 ==1  %}
+                                <div class="col-sm-2 col-xs-2 big-and-icon">
+                                    &
+                                </div>
+                             {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

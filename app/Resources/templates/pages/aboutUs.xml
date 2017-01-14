@@ -1,0 +1,210 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>aboutUs</key>
+
+    <view>templates/aboutUs</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="en">about Us</title>
+        <title lang="de">about Us</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                        <title lang="de">Titel</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="en">Resourcelocator</title>
+                        <title lang="de">Adresse</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+
+        <section name="music">
+            <meta>
+                <title lang="en">Music Experts</title>
+            </meta>
+            <properties>
+                <property name="music_experts_title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                    </meta>
+                </property>
+                <property name="music_experts_desc" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc</title>
+                    </meta>
+                </property>
+                <property name="music_experts_img" type="media_selection" mandatory="true">
+                    <meta>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <block name="users" mandatory="true" default-type="user" minOccurs="1">
+            <meta>
+                <title lang="en">users</title>
+            </meta>
+            <types>
+                <type name="user">
+                    <meta>
+                        <title lang="en">US</title>
+                    </meta>
+                    <properties>
+                        <property name="name" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Name</title>
+                            </meta>
+                        </property>
+                        <property name="title" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Title</title>
+                            </meta>
+                        </property>
+                        <property name="desc" type="text_area" mandatory="true">
+                            <meta>
+                                <title lang="en">Desc</title>
+                            </meta>
+                        </property>
+                        <property name="img_icon" type="media_selection" mandatory="true">
+                            <meta>
+                                <title lang="en">icon on the top</title>
+                            </meta>
+                        </property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+
+
+        <section name="GreenUnitedMusic">
+            <meta>
+                <title lang="en">Green United Music</title>
+            </meta>
+            <properties>
+                <property name="green_united_music_title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                    </meta>
+                </property>
+                <property name="green_united_music_desc" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc</title>
+                    </meta>
+                </property>
+                <property name="green_united_music_img" type="media_selection" mandatory="true">
+                    <meta>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="GraftedWorks">
+            <meta>
+                <title lang="en">Grafted Works</title>
+            </meta>
+            <properties>
+                <property name="grafted_works_title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                    </meta>
+                </property>
+                <property name="grafted_works_desc" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc</title>
+                    </meta>
+                </property>
+                <property name="grafted_works_img" type="media_selection" mandatory="true">
+                    <meta>
+                        <title lang="en">Images(max 3 image title in the first line desc in the second line)</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="database">
+            <meta>
+                <title lang="en">Database</title>
+            </meta>
+            <properties>
+                <property name="database_title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                    </meta>
+                </property>
+                <property name="database_title_second_left" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Left Box Second Title</title>
+                    </meta>
+                </property>
+                <property name="database_desc_left" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc in the left</title>
+                    </meta>
+                </property>
+                <property name="database_title_second_right" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Right Box Second Title</title>
+                    </meta>
+                </property>
+                <property name="database_desc_right" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc in the Right</title>
+                    </meta>
+                </property>
+                <property name="database_img_right" type="media_selection" mandatory="true">
+                    <meta>
+                        <title lang="en">Images in the right box</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="network">
+            <meta>
+                <title lang="en">Network</title>
+            </meta>
+            <properties>
+                <property name="network_title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                    </meta>
+                </property>
+                <property name="network_desc" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc</title>
+                    </meta>
+                </property>
+                <property name="network_img" type="media_selection" mandatory="true">
+                    <meta>
+                        <title lang="en">Images(max 2 image title in the first line desc in the second line)</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+    </properties>
+</template>

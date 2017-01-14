@@ -1,0 +1,33 @@
+{% extends "master.html.twig" %}
+
+{% block meta %}
+    {% autoescape false %}
+        {{ sulu_seo(extension.seo, content, urls, shadowBaseLocale) }}
+    {% endautoescape %}
+{% endblock %}
+{% block header %}{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="/css/references.css">
+{% endblock %}
+{% block content %}
+    <div class="references">
+        <h1 property="title" class="vox-title">{{ content.title }}</h1>
+        <div class="vox-bk">
+            <div class="container references-container" property="img">
+                <div class="clearfix">
+                        {% if content.img and content.img['0'] %}
+                            {% for img in content.img %}
+                                {% if img.url %}
+                                    <div class="img-box">
+                                        <div class="img-content">
+                                            <img src="{{ img.url }}" class="img-responsive">
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>whatWeDeliver</key>
+
+    <view>templates/whatWeDeliver</view>
+    <controller>SuluWebsiteBundle:Default:index</controller>
+    <cacheLifetime>2400</cacheLifetime>
+
+    <meta>
+        <title lang="en">what We Deliver</title>
+        <title lang="de">what We Deliver</title>
+    </meta>
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                        <title lang="de">Titel</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+
+                <property name="url" type="resource_locator" mandatory="true">
+                    <meta>
+                        <title lang="en">Resourcelocator</title>
+                        <title lang="de">Adresse</title>
+                    </meta>
+
+                    <tag name="sulu.rlp"/>
+                </property>
+            </properties>
+        </section>
+
+        <block name="services" mandatory="true" default-type="service" minOccurs="1" maxOccurs="3">
+            <meta>
+                <title lang="en">Services</title>
+            </meta>
+            <types>
+                <type name="service">
+                    <meta>
+                        <title lang="en">What we deliver</title>
+                    </meta>
+                    <properties>
+                        <property name="title" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Title</title>
+                            </meta>
+                        </property>
+                        <property name="desc" type="text_editor">
+                            <meta>
+                                <title lang="en">Desc</title>
+                            </meta>
+                        </property>
+                        <property name="img" type="media_selection" mandatory="true">
+                            <meta>
+                                <title lang="en">Images(images description will show below the images)</title>
+                            </meta>
+                        </property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+    </properties>
+</template>

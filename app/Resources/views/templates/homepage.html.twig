@@ -6,22 +6,23 @@
     {% endautoescape %}
 {% endblock %}
 {% block style %}
-    <style>
-        #menu{
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <script src="/js/homepage.js"></script>
 {% endblock %}
 {% block header %}{% endblock %}
-{% block menu %}{% endblock %}
-
+{% block bodyAttr %}
+    {% if content.img_desktop and content.img_desktop['0'] %}
+        {% set img_desktop =content.img_desktop['0'].url %}
+    {% else %}
+        {% set img_desktop ="/image/home.jpg" %}
+    {% endif %}
+    {% if content.img_mobile and content.img_mobile['0'] %}
+        {% set img_mobile =content.img_mobile['0'].url %}
+    {% else %}
+        {% set img_mobile ="/image/home_mobile.jpg" %}
+    {% endif %}
+    data-desktop ="{{ img_desktop }}" data-mobile="{{ img_mobile }}" class="homepage"
+{% endblock %}
 {% block content %}
-    <div property="img">
-        {% if content.img and content.img['0'] %}
-            {% set img =content.img['0'].url %}
-        {% else %}
-            {% set img ="/image/coming-soon.jpg" %}
-        {% endif %}
-        <img src="{{ img }}" width="100%">
-    </div>
+
 {% endblock %}

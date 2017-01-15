@@ -27,7 +27,7 @@
                     <span class="title-left-icon">/</span>{{ content.music_experts_title }}
                 </div>
             </div>
-            <div class="row music-experts-row flex flex-vc vox-gray-bk">
+            <div class="clearfix music-experts-row flex flex-vc vox-gray-bk">
                 <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-2">
                     {% if content.music_experts_img and content.music_experts_img['0'] %}
                         <img src="{{ content.music_experts_img['0'].url }}" class="img-full-box">
@@ -57,7 +57,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="row green-united-music-row flex flex-vc vox-gray-bk">
+            <div class="clearfix green-united-music-row flex flex-vc vox-gray-bk">
                 <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-1">
                     {% if content.green_united_music_img and content.green_united_music_img['0'] %}
                         <img src="{{ content.green_united_music_img['0'].url }}" class="img-full-box">

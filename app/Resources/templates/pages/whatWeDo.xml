@@ -92,9 +92,14 @@
                         <title lang="en">What we d</title>
                     </meta>
                     <properties>
-                        <property name="media" type="media_selection" mandatory="true">
+                        <property name="image" type="media_selection">
                             <meta>
-                                <title lang="en">media(media left)</title>
+                                <title lang="en">image(iamge left should only choice one, image or media and only upload one)</title>
+                            </meta>
+                        </property>
+                        <property name="media" type="media_selection">
+                            <meta>
+                                <title lang="en">media(media left, ogg is good)</title>
                             </meta>
                         </property>
                         <property name="logo" type="media_selection" mandatory="true">
@@ -128,9 +133,14 @@
                         <title lang="en">What we did</title>
                     </meta>
                     <properties>
-                        <property name="media" type="media_selection" mandatory="true">
+                        <property name="image" type="media_selection">
                             <meta>
-                                <title lang="en">media(media left)</title>
+                                <title lang="en">image(iamge left should only choice one, image or media and only upload one)</title>
+                            </meta>
+                        </property>
+                        <property name="media" type="media_selection">
+                            <meta>
+                                <title lang="en">media(media left, ogg is good)</title>
                             </meta>
                         </property>
                         <property name="logo" type="media_selection" mandatory="true">
@@ -164,9 +174,14 @@
                         <title lang="en">What we did</title>
                     </meta>
                     <properties>
-                        <property name="media" type="media_selection" mandatory="true">
+                        <property name="image" type="media_selection">
                             <meta>
-                                <title lang="en">media(media left)</title>
+                                <title lang="en">image(iamge left should only choice one, image or media and only upload one)</title>
+                            </meta>
+                        </property>
+                        <property name="media" type="media_selection">
+                            <meta>
+                                <title lang="en">media(media left, ogg is good)</title>
                             </meta>
                         </property>
                         <property name="logo" type="media_selection" mandatory="true">

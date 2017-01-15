@@ -8,6 +8,7 @@
 {% block header %}{% endblock %}
 {% block style %}
     <link rel="stylesheet" href="/css/whatWeDo.css">
+    <script src="/js/whatWeDo.js"></script>
 {% endblock %}
 {% block bodyAttr %}data-offset="97"{% endblock %}
 {% block content %}
@@ -27,7 +28,7 @@
                         <span class="title-left-icon">/</span>{{ service.title }}
                     </div>
                 </div>
-                <div class="what-we-do-content row flex flex-vc vox-gray-bk">
+                <div class="what-we-do-content clearfix flex flex-vc vox-gray-bk">
                     <div class="col-sm-6 col-xs-12 what-we-do-content-imgbox {% if loop.index%2==1 %}flex-2{% else %}flex-1{% endif %}">
                         {% if service.img_bk and service.img_bk['0'] %}
                             <img src="{{ service.img_bk['0'].url }}" class="img-full-box">
@@ -44,60 +45,81 @@
                                     </div>
                                 </div>
                                 <div class="deliver-icon-desc">{{ service.desc|raw }}</div>
-                                {% if service.img_bottom and service.img_bottom['0'] %}
-                                    <div class="img-bootom-box">
-                                        {% for img_bottom in service.img_bottom %}
-                                            <img src="{{ img_bottom.url }}" class="img-bottom">
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
                             </div>
+                            {% if service.img_bottom and service.img_bottom['0'] %}
+                                <div class="img-bootom-box">
+                                    {% for img_bottom in service.img_bottom %}
+                                        <img src="{{ img_bottom.url }}" class="img-bottom">
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-                    {% if loop.index>1 and loop.index <5 %}
-                        {% set slideshowIndex = "slideshow"~loop.index-1  %}
-                        <div class="slideshow-title">What we did</div>
-                        {% if content[slideshowIndex].length >1 %}
+                {% if loop.index>1 and loop.index <5 %}
+                    {% set slideshowIndex = "slideshow"~(loop.index-1)  %}
+                    <div class="slideshow-title">What we did</div>
+                    {% if content[slideshowIndex]|length >1 %}
+                        <div class="container">
                             <div class="slidershow-box">
-                                <div class="container cycle">
-                                    {% for slider in content[slideshowIndex] %}
+                                {% for slider in content[slideshowIndex] %}
+                                <div class="cycle-box">
+                                    <div class="clearfix cycle-row">
+                                        <div class="col-sm-6 col-xs-12 slidershow-media">
+                                            {% if slider.image and slider.image[0]  %}
+                                                <div class="slider-img-border">
+                                                    <img src="{{ slider.image[0].url }}" class="slider-img">
+                                                </div>
+                                            {% elseif slider.media and slider.media[0] %}
+                                                <div class="slider-media-box">
+                                                    <video src="{{ slider.media[0].url }}"  controls="controls" class="slider-media">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-sm-6 col-xs-12 slidershow-desc">
+                                            <div class="desc-logo"><img src="{{ slider.logo[0].url }}" class="slider-logo"></div>
+                                            <div class="vox-desc">{{ slider.desc|raw }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <div class="cycle-prev cycle-arrow">&lt;</div>
+                                <div class="cycle-next cycle-arrow">&gt;</div>
+                                <div class="cycle-pager"></div>
+                            </div>
+                        </div>
+                    {% else %}
+                            <div class="container cycle">
+                                <div class="no-slidershow-box">
                                     <div class="cycle-box">
-                                        <div class="row">
+                                        <div class="clearfix cycle-row">
                                             <div class="col-sm-6 col-xs-12 slidershow-media">
-                                                <img src="{{ slider.media[0].url }}" class="img-bottom">
+                                                {% if content[slideshowIndex][0].image and content[slideshowIndex][0].image[0]  %}
+                                                    <div class="slider-img-border">
+                                                        <img src="{{ content[slideshowIndex][0].image[0].url }}" class="slider-img">
+                                                    </div>
+                                                {% else %}
+                                                    {% if content[slideshowIndex][0].media and content[slideshowIndex][0].media[0] %}
+                                                        <div class="slider-media-box">
+                                                            <video src="{{ content[slideshowIndex][0].media[0].url }}"  controls="controls" class="slider-media">
+                                                                Your browser does not support the video tag.
+                                                            </video>
+                                                        </div>
+                                                    {% endif %}
+                                                {% endif %}
                                             </div>
                                             <div class="col-sm-6 col-xs-12 slidershow-desc">
-                                                <div class="desc-logo">{{ slider.logo[0].url }}</div>
-                                                <div class="vox-desc">{{ slider.desc|raw }}</div>
+                                                <div class="desc-logo"><img src="{{ content[slideshowIndex][0].logo[0].url }}" class="slider-logo"></div>
+                                                <div class="vox-desc">{{ content[slideshowIndex][0].desc|raw }}</div>
                                             </div>
                                         </div>
                                     </div>
-                                    {% endfor %}
-                                    <div class="cycle-prev cycle-arrow i-arrow-left"></div>
-                                    <div class="cycle-next cycle-arrow i-arrow-right"></div>
-                                    <div class="cycle-pager"></div>
-                                </div>
                             </div>
-                        {% else %}
-                            <div class="slidershow-box">
-                                <div class="container cycle">
-                                        <div class="cycle-box">
-                                            <div class="row">
-                                                <div class="col-sm-6 col-xs-12 slidershow-media">
-                                                    <img src="{{ content[slideshowIndex][0].media[0].url }}" class="img-bottom">
-                                                </div>
-                                                <div class="col-sm-6 col-xs-12 slidershow-desc">
-                                                    <div class="desc-logo">{{ content[slideshowIndex][0].logo[0].url }}</div>
-                                                    <div class="vox-desc">{{ content[slideshowIndex][0].desc|raw }}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                        {% endif %}
-                    {% endif  %}
-                </div>
+                        </div>
+                    {% endif %}
+                {% endif  %}
             </div>
         {% endfor %}
     </div>

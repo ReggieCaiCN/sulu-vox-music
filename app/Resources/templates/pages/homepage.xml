@@ -40,10 +40,14 @@
             </properties>
         </section>
 
-        <property name="article" type="text_editor">
+        <property name="img_desktop" type="media_selection">
             <meta>
-                <title lang="en">Article</title>
-                <title lang="de">Artikel</title>
+                <title lang="en">Desktop</title>
+            </meta>
+        </property>
+        <property name="img_mobile" type="media_selection">
+            <meta>
+                <title lang="en">Mobile</title>
             </meta>
         </property>
     </properties>

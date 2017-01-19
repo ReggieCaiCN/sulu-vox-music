@@ -150,7 +150,7 @@ overflow: hidden;
 @media (max-width: 767px) {
 
     #content {
-        margin-top: 96px;
+        margin-top: 72px;
     }
     .page-menu .page-menu-list:not(:last-child) {
         margin-right: 6px;

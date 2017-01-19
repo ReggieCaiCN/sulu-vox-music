@@ -8,9 +8,18 @@
 
 {% block style %}
     <link rel="stylesheet" href="/css/contacts.css">
+    <script src="/js/contacts.js"></script>
 {% endblock %}
 
 {% block content %}
+    <div class="page-menu">
+        <div class="page-menu-container">
+            <a class="page-menu-list" href="/about-us">About Us</a>
+            <a class="page-menu-list" href="/what-we-do">What We Do</a>
+            <a class="page-menu-list" href="/what-we-deliver">What We Deliver</a>
+            <a class="page-menu-list" href="/references">References</a>
+        </div>
+    </div>
     <div class="contacts">
         <h1 property="title" class="vox-title">{{ content.title }}</h1>
         <div class="vox-bk">

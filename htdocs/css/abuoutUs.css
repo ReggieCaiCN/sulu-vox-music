@@ -38,7 +38,7 @@
     font-size: 14px;
 }
 .about-us .green-united-music-row{
-    margin-bottom: 74px;
+    margin-bottom: 0px;
 }
 .about-us .green-united-music-row .green_united_music-title{
     font-size: 22px;
@@ -175,7 +175,7 @@
         font-size: 10px;
     }
     .about-us .green-united-music-row{
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
     .about-us .green-united-music-row .vox-container-half{
         padding:28px;

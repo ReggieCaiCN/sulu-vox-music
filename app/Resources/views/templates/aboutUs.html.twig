@@ -8,72 +8,21 @@
 {% block header %}{% endblock %}
 {% block style %}
     <link rel="stylesheet" href="/css/abuoutUs.css">
+    <script src="/js/aboutUs.js"></script>
 {% endblock %}
 {% block bodyAttr %}data-offset="97"{% endblock %}
 {% block content %}
     <div class="page-menu">
         <div class="page-menu-container">
-            <a class="page-menu-list" href="#page-menu-index1">{{ content.music_experts_title }}</a>
-            <a class="page-menu-list" href="#page-menu-index2">{{ content.grafted_works_title }}</a>
-            <a class="page-menu-list" href="#page-menu-index3">{{ content.database_title }}</a>
-            <a class="page-menu-list" href="#page-menu-index4">{{ content.network_title}}</a>
+            <a class="page-menu-list" href="/what-we-do">What We Do</a>
+            <a class="page-menu-list" href="/what-we-deliver">What We Deliver</a>
+            <a class="page-menu-list" href="/references">References</a>
+            <a class="page-menu-list" href="/contacts">Contacts</a>
         </div>
     </div>
     <div class="about-us">
         <h1 property="title" class="vox-title">{{ content.title }}</h1>
-        <div id="page-menu-index1">
-            <div class="container about-us-container music-experts-title">
-                <div class="vox-title-second">
-                    <span class="title-left-icon">/</span>{{ content.music_experts_title }}
-                </div>
-            </div>
-            <div class="clearfix music-experts-row flex flex-vc vox-gray-bk">
-                <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-2">
-                    {% if content.music_experts_img and content.music_experts_img['0'] %}
-                        <img src="{{ content.music_experts_img['0'].url }}" class="img-full-box">
-                    {% endif %}
-                </div>
-                <div class="col-sm-6 col-xs-12 about-us-content-desc flex-1">
-                    <div class="vox-container-half vox-container-half-left">
-                        <div class="content-desc-text">
-                            <div class="vox-desc">{{ content.music_experts_desc|raw }}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="container">
-                <div class="row users-row">
-                    {% for user in content.users %}
-                        <div class="col-sm-4 col-xs-12 user-box">
-                            {% if user.img_icon and user.img_icon['0'] %}
-                                <img src="{{ user.img_icon['0'].url }}" class="user-icon">
-                            {% endif %}
-                            <div class="user-name">{{ user.name }}</div>
-                            <div class="vox-line">/</div>
-                            <div class="user-title">{{ user.title }}</div>
-                            <div class="vox-desc">{{ user.desc|raw }}</div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="clearfix green-united-music-row flex flex-vc vox-gray-bk">
-                <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-1">
-                    {% if content.green_united_music_img and content.green_united_music_img['0'] %}
-                        <img src="{{ content.green_united_music_img['0'].url }}" class="img-full-box">
-                    {% endif %}
-                </div>
-                <div class="col-sm-6 col-xs-12 about-us-content-desc flex-2">
-                    <div class="vox-container-half vox-container-half-right">
-                        <div class="content-desc-text">
-                            <div class="green_united_music-title">{{ content.green_united_music_title }}</div>
-                            <div class="vox-line">/</div>
-                            <div class="green_united_music-desc">{{ content.green_united_music_desc|raw }}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="page-menu-index2">
             <div class="container">
                 <div class="vox-title-second">
@@ -85,7 +34,7 @@
                     </div>
                     {% for greenImg in content.grafted_works_img %}
                         {% if greenImg.url %}
-                            <div class="col-sm-4 col-xs-4 green_united_music-imgbox">
+                            <div class="col-sm-6 col-xs-6 green_united_music-imgbox">
                                 <div class="green-img-border"><img src="{{ greenImg.url }}" class="green-img img-responsive"></div>
                                 <div class="green-img-title">{{ greenImg.title }}</div>
                                 <div class="green-img-desc">{{ greenImg.description }}</div>
@@ -146,6 +95,59 @@
                              {% endif %}
                         {% endif %}
                     {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div id="page-menu-index1">
+            <div class="container about-us-container music-experts-title">
+                <div class="vox-title-second">
+                    <span class="title-left-icon">/</span>{{ content.music_experts_title }}
+                </div>
+            </div>
+            <div class="clearfix music-experts-row flex flex-vc vox-gray-bk">
+                <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-2">
+                    {% if content.music_experts_img and content.music_experts_img['0'] %}
+                        <img src="{{ content.music_experts_img['0'].url }}" class="img-full-box">
+                    {% endif %}
+                </div>
+                <div class="col-sm-6 col-xs-12 about-us-content-desc flex-1">
+                    <div class="vox-container-half vox-container-half-left">
+                        <div class="content-desc-text">
+                            <div class="vox-desc">{{ content.music_experts_desc|raw }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row users-row">
+                    {% for user in content.users %}
+                        <div class="col-sm-4 col-xs-12 user-box">
+                            {% if user.img_icon and user.img_icon['0'] %}
+                                <img src="{{ user.img_icon['0'].url }}" class="user-icon">
+                            {% endif %}
+                            <div class="user-name">{{ user.name }}</div>
+                            <div class="vox-line">/</div>
+                            <div class="user-title">{{ user.title }}</div>
+                            <div class="vox-desc">{{ user.desc|raw }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="clearfix green-united-music-row flex flex-vc vox-gray-bk">
+                <div class="col-sm-6 col-xs-12 about-us-content-imgbox flex-1">
+                    {% if content.green_united_music_img and content.green_united_music_img['0'] %}
+                        <img src="{{ content.green_united_music_img['0'].url }}" class="img-full-box">
+                    {% endif %}
+                </div>
+                <div class="col-sm-6 col-xs-12 about-us-content-desc flex-2">
+                    <div class="vox-container-half vox-container-half-right">
+                        <div class="content-desc-text">
+                            <div class="green_united_music-title">{{ content.green_united_music_title }}</div>
+                            <div class="vox-line">/</div>
+                            <div class="green_united_music-desc">{{ content.green_united_music_desc|raw }}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

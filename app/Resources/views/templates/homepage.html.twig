@@ -11,6 +11,9 @@
 {% endblock %}
 {% block header %}{% endblock %}
 {% block bodyAttr %}
+    class="homepage"
+{% endblock %}
+{% block content %}
     {% if content.img_desktop and content.img_desktop['0'] %}
         {% set img_desktop =content.img_desktop['0'].url %}
     {% else %}
@@ -21,8 +24,8 @@
     {% else %}
         {% set img_mobile ="/image/home_mobile.jpg" %}
     {% endif %}
-    data-desktop ="{{ img_desktop }}" data-mobile="{{ img_mobile }}" class="homepage"
-{% endblock %}
-{% block content %}
-
+    <div id="fullpage">
+        <div class="section first-section" data-desktop ="{{ img_desktop }}" data-mobile="{{ img_mobile }}"></div>
+        <div class="section"></div>
+    </div>
 {% endblock %}

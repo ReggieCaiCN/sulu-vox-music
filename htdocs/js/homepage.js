@@ -1,11 +1,20 @@
 $(document).on('ready', function(){
-    var $body=$('body');
-
+    var $section = $('#fullpage').find('.first-section');
     if(window.innerWidth < 768){
-        $body.css('background-image',"url("+$body.data("mobile")+")" );
+        $section.css('background-image',"url("+$section.data("mobile")+")" );
     }else{
-        $body.css('background-image',"url("+$body.data("desktop")+")");
+        $section.css('background-image',"url("+$section.data("desktop")+")");
     }
+
+    $('#fullpage').fullpage({
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
+            //using index
+            if(index == 2){
+                window.location.href="/about-us";
+            }
+        }
+    });
 
 });/**
  * Created by 123 on 2017/1/8.

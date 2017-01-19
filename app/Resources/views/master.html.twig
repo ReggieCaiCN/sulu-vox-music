@@ -7,9 +7,11 @@
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/jquery.fullpage.min.css">
         <script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
         <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script src="/js/jquery.cycle2.min.js"></script>
+        <script src="/js/jquery.fullpage.min.js"></script>
         <script src="/js/main.js"></script>
         <link rel="stylesheet" href="/css/main.css">
         {% block meta %}{% endblock %}
@@ -61,37 +63,37 @@
                             <nav>
                                 <ul>
                                     <li class="dropdown">
-                                        <a href="/about-us" class="menu-list-first" data-toggle="dropdown" data-target=".dropdown-menu-1">
+                                        <a href="/about-us" class="menu-list-first">
                                             <span class="li-left-icon">/</span>about us</span>
                                         </a>
-                                        <div class="dropdown-menu dropdown-listings dropdown-menu-1">
-                                            <a class="" href="/about-us#page-menu-index1">Music Experts</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/about-us#page-menu-index2">Crafted Work</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/about-us#page-menu-index3">Database</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/about-us#page-menu-index4">Network</a>
-                                        </div>
+                                        {#<div class="dropdown-menu dropdown-listings dropdown-menu-1">#}
+                                            {#<a class="" href="/about-us#page-menu-index1">Music Experts</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/about-us#page-menu-index2">Crafted Work</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/about-us#page-menu-index3">Database</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/about-us#page-menu-index4">Network</a>#}
+                                        {#</div>#}
                                     </li>
                                     <li class="dropdown">
-                                        <a href="/what-we-do" class="menu-list-first" data-toggle="dropdown" data-target=".dropdown-menu-2">
+                                        <a href="/what-we-do" class="menu-list-first">
                                             <span class="li-left-icon">/</span>what we do</span>
                                         </a>
-                                        <div class="dropdown-menu dropdown-listings dropdown-menu-2">
-                                            <a class="" href="/what-we-do#page-menu-index1">Music Direction</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/what-we-do#page-menu-index2">Background Music</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/what-we-do#page-menu-index3">Events & Fashion Shows</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/what-we-do#page-menu-index4">Sync Music</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/what-we-do#page-menu-index5">Copyrights Management</a>
-                                        </div>
+                                        {#<div class="dropdown-menu dropdown-listings dropdown-menu-2">#}
+                                            {#<a class="" href="/what-we-do#page-menu-index1">Music Direction</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/what-we-do#page-menu-index2">Background Music</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/what-we-do#page-menu-index3">Events & Fashion Shows</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/what-we-do#page-menu-index4">Sync Music</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/what-we-do#page-menu-index5">Copyrights Management</a>#}
+                                        {#</div>#}
                                     </li>
                                     <li class="dropdown">
-                                        <a href="/what-we-deliver" class="menu-list-first" data-toggle="dropdown" data-target=".dropdown-menu-3">
+                                        <a href="/what-we-deliver" class="menu-list-first">
                                             <span class="li-left-icon">/</span>what we deliver</span>
                                         </a>
-                                        <div class="dropdown-menu dropdown-listings dropdown-menu-3">
-                                            <a class="" href="/what-we-deliver#page-menu-index1">Optimized Device</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/what-we-deliver#page-menu-index2">Easy-to-use Solution</a> <span class="li-left-small-icon">/</span>
-                                            <a class="" href="/what-we-deliver#page-menu-index3">Updated tailor-made selection</a>
-                                        </div>
+                                        {#<div class="dropdown-menu dropdown-listings dropdown-menu-3">#}
+                                            {#<a class="" href="/what-we-deliver#page-menu-index1">Optimized Device</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/what-we-deliver#page-menu-index2">Easy-to-use Solution</a> <span class="li-left-small-icon">/</span>#}
+                                            {#<a class="" href="/what-we-deliver#page-menu-index3">Updated tailor-made selection</a>#}
+                                        {#</div>#}
                                     </li>
                                     <li class="dropdown">
                                         <a href="/references" class="menu-list-first">

@@ -8,14 +8,16 @@
 {% block header %}{% endblock %}
 {% block style %}
     <link rel="stylesheet" href="/css/whatWeDeliver.css">
+    <script src="/js/whatWeDeliver.js"></script>
 {% endblock %}
 {% block bodyAttr %}data-offset="97"{% endblock %}
 {% block content %}
     <div class="page-menu">
         <div class="page-menu-container">
-            {% for service in content.services %}
-                <a class="page-menu-list" href="#page-menu-index{{ loop.index }}">{{ service.title }}</a>
-            {% endfor%}
+            <a class="page-menu-list" href="/about-us">About Us</a>
+            <a class="page-menu-list" href="/what-we-do">What We Do</a>
+            <a class="page-menu-list" href="/references">References</a>
+            <a class="page-menu-list" href="/contacts">Contacts</a>
         </div>
     </div>
     <div class="deliver">
@@ -23,15 +25,15 @@
         {% for service in content.services %}
             <div class="deliver-box {% if loop.index%2 ==1 %}deliver-bk{% endif %}" id="page-menu-index{{ loop.index }}">
                 <div class="container deliver-container">
+                    {% if service.desc %}
+                    <div class="vox-desc">
+                        {{ service.desc|raw }}
+                    </div>
+                    {% endif %}
                     <div class="vox-title-second">
                         <span class="title-left-icon">/</span>{{ service.title }}
                     </div>
                     <div class="deliver-content">
-                        {% if service.desc %}
-                            <div class="vox-desc">
-                                {{ service.desc|raw }}
-                            </div>
-                        {% endif %}
                         {% if service.img and service.img['0'] %}
                             <div class="row">
                                 {% for img in service.img %}

@@ -40,91 +40,9 @@
             </properties>
         </section>
 
-        <section name="music">
-            <meta>
-                <title lang="en">Music Experts</title>
-            </meta>
-            <properties>
-                <property name="music_experts_title" type="text_line" mandatory="true">
-                    <meta>
-                        <title lang="en">Title</title>
-                    </meta>
-                </property>
-                <property name="music_experts_desc" type="text_editor" mandatory="true">
-                    <meta>
-                        <title lang="en">Desc</title>
-                    </meta>
-                </property>
-                <property name="music_experts_img" type="media_selection" mandatory="true">
-                    <meta>
-                        <title lang="en">Images</title>
-                    </meta>
-                </property>
-            </properties>
-        </section>
-
-        <block name="users" mandatory="true" default-type="user" minOccurs="1">
-            <meta>
-                <title lang="en">users</title>
-            </meta>
-            <types>
-                <type name="user">
-                    <meta>
-                        <title lang="en">US</title>
-                    </meta>
-                    <properties>
-                        <property name="name" type="text_line" mandatory="true">
-                            <meta>
-                                <title lang="en">Name</title>
-                            </meta>
-                        </property>
-                        <property name="title" type="text_line" mandatory="true">
-                            <meta>
-                                <title lang="en">Title</title>
-                            </meta>
-                        </property>
-                        <property name="desc" type="text_area" mandatory="true">
-                            <meta>
-                                <title lang="en">Desc</title>
-                            </meta>
-                        </property>
-                        <property name="img_icon" type="media_selection" mandatory="true">
-                            <meta>
-                                <title lang="en">icon on the top</title>
-                            </meta>
-                        </property>
-                    </properties>
-                </type>
-            </types>
-        </block>
-
-
-        <section name="GreenUnitedMusic">
-            <meta>
-                <title lang="en">Green United Music</title>
-            </meta>
-            <properties>
-                <property name="green_united_music_title" type="text_line" mandatory="true">
-                    <meta>
-                        <title lang="en">Title</title>
-                    </meta>
-                </property>
-                <property name="green_united_music_desc" type="text_editor" mandatory="true">
-                    <meta>
-                        <title lang="en">Desc</title>
-                    </meta>
-                </property>
-                <property name="green_united_music_img" type="media_selection" mandatory="true">
-                    <meta>
-                        <title lang="en">Images</title>
-                    </meta>
-                </property>
-            </properties>
-        </section>
-
         <section name="GraftedWorks">
             <meta>
-                <title lang="en">Grafted Works</title>
+                <title lang="en">STUDIO</title>
             </meta>
             <properties>
                 <property name="grafted_works_title" type="text_line" mandatory="true">
@@ -201,6 +119,88 @@
                 <property name="network_img" type="media_selection" mandatory="true">
                     <meta>
                         <title lang="en">Images(max 2 image title in the first line desc in the second line)</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <section name="music">
+            <meta>
+                <title lang="en">TEAM</title>
+            </meta>
+            <properties>
+                <property name="music_experts_title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                    </meta>
+                </property>
+                <property name="music_experts_desc" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc</title>
+                    </meta>
+                </property>
+                <property name="music_experts_img" type="media_selection" mandatory="true">
+                    <meta>
+                        <title lang="en">Images</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+        <block name="users" mandatory="true" default-type="user" minOccurs="1">
+            <meta>
+                <title lang="en">users</title>
+            </meta>
+            <types>
+                <type name="user">
+                    <meta>
+                        <title lang="en">US</title>
+                    </meta>
+                    <properties>
+                        <property name="name" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Name</title>
+                            </meta>
+                        </property>
+                        <property name="title" type="text_line" mandatory="true">
+                            <meta>
+                                <title lang="en">Title</title>
+                            </meta>
+                        </property>
+                        <property name="desc" type="text_area" mandatory="true">
+                            <meta>
+                                <title lang="en">Desc</title>
+                            </meta>
+                        </property>
+                        <property name="img_icon" type="media_selection" mandatory="true">
+                            <meta>
+                                <title lang="en">icon on the top</title>
+                            </meta>
+                        </property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+
+
+        <section name="GreenUnitedMusic">
+            <meta>
+                <title lang="en">Green United Music</title>
+            </meta>
+            <properties>
+                <property name="green_united_music_title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                    </meta>
+                </property>
+                <property name="green_united_music_desc" type="text_editor" mandatory="true">
+                    <meta>
+                        <title lang="en">Desc</title>
+                    </meta>
+                </property>
+                <property name="green_united_music_img" type="media_selection" mandatory="true">
+                    <meta>
+                        <title lang="en">Images</title>
                     </meta>
                 </property>
             </properties>

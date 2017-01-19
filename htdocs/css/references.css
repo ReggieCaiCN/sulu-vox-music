@@ -30,6 +30,12 @@
 
 /*mobile*/
 @media (max-width: 767px) {
+    #content{
+        margin-top: 72px;
+    }
+    .page-menu .page-menu-list:not(:last-child) {
+        margin-right: 1em;
+    }
     .references{
         padding-top: 10px;
     }

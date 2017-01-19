@@ -8,8 +8,17 @@
 {% block header %}{% endblock %}
 {% block style %}
     <link rel="stylesheet" href="/css/references.css">
+    <script src="/js/references.js"></script>
 {% endblock %}
 {% block content %}
+    <div class="page-menu">
+        <div class="page-menu-container">
+            <a class="page-menu-list" href="/about-us">About Us</a>
+            <a class="page-menu-list" href="/what-we-do">What We Do</a>
+            <a class="page-menu-list" href="/what-we-deliver">What We Deliver</a>
+            <a class="page-menu-list" href="/contacts">Contacts</a>
+        </div>
+    </div>
     <div class="references">
         <h1 property="title" class="vox-title">{{ content.title }}</h1>
         <div class="vox-bk">

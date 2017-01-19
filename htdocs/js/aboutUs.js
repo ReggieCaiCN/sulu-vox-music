@@ -1,6 +1,6 @@
 $(document).on('ready', function(){
     $(window).on('scroll',function(){
-        if(window.pageYOffset+$(window).height() >= $('#footer').offset().top){
+        if(window.pageYOffset+$(window).height()+20 >= $('#footer').offset().top){
             window.location.href="/what-we-do";
         }
     });

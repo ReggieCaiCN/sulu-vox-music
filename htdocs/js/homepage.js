@@ -10,7 +10,10 @@ $(document).on('ready', function(){
         afterLoad: function(anchorLink, index){
             var loadedSection = $(this);
             //using index
-            if(index == 2){
+            if(index == 1){
+                window.location.href="/contacts";
+            }
+            if(index == 3){
                 window.location.href="/about-us";
             }
         }

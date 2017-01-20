@@ -3,6 +3,9 @@ $(document).on('ready', function(){
         if(window.pageYOffset+$(window).height()+20 >= $('#footer').offset().top){
             window.location.href="/references";
         }
+        if(window.pageYOffset==0){
+            window.location.href="/what-we-do";
+        }
     });
 
 });/**

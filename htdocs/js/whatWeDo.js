@@ -32,6 +32,9 @@ $(document).on('ready', function(){
         if(window.pageYOffset+$(window).height()+20 >= $('#footer').offset().top){
             window.location.href="/what-we-deliver";
         }
+        if(window.pageYOffset==0){
+            window.location.href="/about-us";
+        }
     });
 
 });/**

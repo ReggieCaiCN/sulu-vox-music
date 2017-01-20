@@ -3,6 +3,9 @@ $(document).on('ready', function(){
         if(window.pageYOffset+$(window).height()+20 >= $('#footer').offset().top){
             window.location.href="/what-we-do";
         }
+        if(window.pageYOffset==0){
+            window.location.href="/";
+        }
     });
 });/**
  * Created by 123 on 2017/1/8.
